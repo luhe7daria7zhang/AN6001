@@ -17,7 +17,6 @@ def main():
 
 @app.route("/dbs",methods=["GET","POST"])
 def dbs():
-    q = request.form.get("q")
     return(render_template("dbs.html"))
 
 @app.route("/dbsP",methods=["GET","POST"])
@@ -27,5 +26,5 @@ def dbsP():
     return(render_template("dbsP.html", r=r[0][0]))
 
 if __name__ == "__main__":
-    app.run(port = 5001, debug = True)#为什么加
+    app.run(port = 5001, debug = True)
 
